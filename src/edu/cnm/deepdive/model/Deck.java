@@ -11,15 +11,16 @@ import java.util.List;
 import java.util.Random;
 
 public class Deck {
+
   private List<Card> cards;
   private List<Card> dealt;
 
 
-  public Deck () {
+  public Deck() {
     cards = new ArrayList<>();
     dealt = new LinkedList<>();
-    for (Suit s : Suit.values()){
-      for (Rank r : Rank.values()){
+    for (Suit s : Suit.values()) {
+      for (Rank r : Rank.values()) {
         cards.add(new Card(s, r));
       }
     }
@@ -34,17 +35,24 @@ public class Deck {
     return card;
   }
 
- public void shuffle(Random rng){
+  public void shuffle(Random rng) {
 
     cards.addAll(dealt);
     dealt.clear();
-   Collections.shuffle(cards, rng);
- }
+    Collections.shuffle(cards, rng);
+  }
+
+  public int remaining() {
+    return cards.size();
+  }
+
+  public int dealt() {
+  return  dealt.size();
+  }
 
   @Override
   public String toString() {
-  return cards.toString();
-
+    return cards.toString();
   }
 
   public static void main(String[] args) {
