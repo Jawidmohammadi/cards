@@ -20,7 +20,7 @@ class DeckTest {
       check.add(c);
     }
     assertEquals(52, check.size());
-    
+
   }
 
   @Test
