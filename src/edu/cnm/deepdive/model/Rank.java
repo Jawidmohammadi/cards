@@ -1,5 +1,9 @@
 package edu.cnm.deepdive.model;
 
+/**
+ * Returns {@link #rank() }
+ * Initialize the value for each set of cards
+ */
 public enum Rank {
   ACE,
   TWO,
@@ -15,6 +19,10 @@ public enum Rank {
   QUEEN,
   KING;
 
+  /**
+   * Returns {@link #symbol()}
+   * Initialize the Symbol for each Set of Cards.
+   */
   private static final String[] symbols = {
       "A",
       "2",

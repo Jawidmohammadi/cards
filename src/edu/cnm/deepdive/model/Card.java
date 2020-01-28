@@ -41,10 +41,14 @@ public class Card {
     return rank;
   }
 
+  /**
+   * Returns {@link String} of this card instance.
+   */
   @Override
   public String toString() {
     return rank.symbol() + suit.symbol();
   }
+
 
   @Override
   public int hashCode() {
@@ -52,6 +56,11 @@ public class Card {
 
   }
 
+  /**
+   * Returns
+   * @param obj
+   * @return
+   */
   @Override
   public boolean equals(Object obj) {
     boolean comparison = false;
