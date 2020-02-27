@@ -5,7 +5,12 @@ package edu.cnm.deepdive.model;
  * return the immutable unicode symbol and  enum {@link Color} instance of any suit.
  */
 public enum Suit {
-  CLUBS, DIAMONDS, HEARTS, SPADES;
+
+  CLUBS,
+  DIAMONDS,
+  HEARTS,
+  SPADES;
+
   private static final String[] symbols = {"\u2663", "\u2662", "\u2661", "\u2660"};
   private static final Color[] colors = {Color.BLACK, Color.RED, Color.RED, Color.BLACK};
 

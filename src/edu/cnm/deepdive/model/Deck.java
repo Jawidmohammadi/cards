@@ -37,9 +37,13 @@ public class Deck {
 
   public void shuffle(Random rng) {
 
+    gather();
+    Collections.shuffle(cards, rng);
+  }
+
+  private void gather() {
     cards.addAll(dealt);
     dealt.clear();
-    Collections.shuffle(cards, rng);
   }
 
   public int remaining() {
@@ -60,6 +64,19 @@ public class Deck {
     System.out.println(deck);
     deck.shuffle(new SecureRandom());
     System.out.println(deck);
+  }
+
+  public void sort(boolean gather){
+    if (gather){
+      gather();
+    }
+    cards.sort((card1, card2) ->{
+      int result = card1.getSuit().compareTo(card2.getSuit());
+      if (result == 0) {
+        result = card1.getRank().compareTo(card2.getRank());
+      }
+      return result;
+    });
   }
 
 
