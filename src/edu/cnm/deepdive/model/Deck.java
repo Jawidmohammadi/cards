@@ -67,6 +67,11 @@ public class Deck{
     System.out.println(deck);
   }
 
+  /**
+   * sorting cards
+   *
+   * */
+
   public void sort(boolean gather){
     if (gather){
       gather();
