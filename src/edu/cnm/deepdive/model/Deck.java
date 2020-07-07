@@ -1,12 +1,8 @@
 package edu.cnm.deepdive.model;
 
-import java.lang.reflect.Array;
 import java.security.SecureRandom;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
